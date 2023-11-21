@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8874304221470667365}
   - component: {fileID: 7950033535414313646}
   - component: {fileID: 6617871818370479966}
+  - component: {fileID: 4990600476138570956}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -105,6 +106,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4990600476138570956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509955369388323544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fe332bfb80ec14c94df1c95a47082a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6384578045449080584
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +130,7 @@ GameObject:
   - component: {fileID: 8012136969524948670}
   - component: {fileID: 7343043628069517720}
   - component: {fileID: 2611749149155343588}
+  - component: {fileID: 5838613607175661803}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -210,6 +224,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5838613607175661803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6384578045449080584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fe332bfb80ec14c94df1c95a47082a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6982567727849156096
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7445674467906931819}
   m_Layer: 0
-  m_Name: ARPrefab
+  m_Name: CubeSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -10,7 +10,6 @@ using UnityEngine.InputSystem;
 
 public class PlaceOnPlane : PressInputBase {
 
-    [SerializeField]  // -> forces Unity to serialize the private field below
     GameObject placedPrefab;
 
     GameObject spawnedObject;   // instantiated prefab
@@ -30,6 +29,10 @@ public class PlaceOnPlane : PressInputBase {
     void Update() {
         
         if (Pointer.current == null || isPressed == false) {
+            return;
+        }
+
+        if (!placedPrefab) {
             return;
         }
 
@@ -63,5 +66,12 @@ public class PlaceOnPlane : PressInputBase {
 
     protected override void OnPressCancel() {
         isPressed = false;
+    }
+
+    public void setPlacedPrefab(GameObject go) {
+        placedPrefab = go;
+        if (spawnedObject) {
+            Destroy(spawnedObject);
+        }
     }
 }

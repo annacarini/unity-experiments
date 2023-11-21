@@ -10,7 +10,6 @@ using UnityEngine.InputSystem;
 
 public class PlaceMultipleObjects : PressInputBase {
 
-    [SerializeField]  // -> forces Unity to serialize the private field below
     GameObject placedPrefab;
 
     GameObject spawnedObject;   // instantiated prefab
@@ -24,6 +23,11 @@ public class PlaceMultipleObjects : PressInputBase {
     }
 
     protected override void OnPress(Vector3 position) {
+
+        if (!placedPrefab) {
+            return;
+        }
+
         // Check if the raycast hits any trackables
         if (aRRaycastManager.Raycast(position, hits, TrackableType.PlaneWithinPolygon)) {
 
@@ -36,5 +40,9 @@ public class PlaceMultipleObjects : PressInputBase {
             lookPos.y = 0;
             spawnedObject.transform.rotation = Quaternion.LookRotation(lookPos);
         }
+    }
+
+    public void setPlacedPrefab(GameObject go) {
+        placedPrefab = go;
     }
 }
