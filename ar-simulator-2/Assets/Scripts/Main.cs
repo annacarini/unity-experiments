@@ -9,7 +9,7 @@ public class Main : MonoBehaviour {
     GameObject menu;
 
     void Start() {
-        menu.SetActive(false);
+        //menu.SetActive(false);
     }
 
     void Update() {

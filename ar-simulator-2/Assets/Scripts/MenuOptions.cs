@@ -38,13 +38,13 @@ public class MenuOptions : MonoBehaviour {
     private void addScript(int scr) {
         switch(scr) {
             case PLACE_ON_PLANE:
-                this.gameObject.AddComponent<PlaceOnPlane>();
+                gameObject.AddComponent<PlaceOnPlane>();
                 break;
             case PLACE_MULTIPLE_OBJECTS:
-                this.gameObject.AddComponent<PlaceMultipleObjects>();
+                gameObject.AddComponent<PlaceMultipleObjects>();
                 break;
             case CAST_RAY_ON_CLICK:
-                this.gameObject.AddComponent<CastRayOnClick>();
+                gameObject.AddComponent<CastRayOnClick>();
                 break;
             default:
                 break;
@@ -54,13 +54,13 @@ public class MenuOptions : MonoBehaviour {
     private void removeScript(int scr) {
         switch(scr) {
             case PLACE_ON_PLANE:
-                Destroy(this.gameObject.GetComponent<PlaceOnPlane>());
+                Destroy(gameObject.GetComponent<PlaceOnPlane>());
                 break;
             case PLACE_MULTIPLE_OBJECTS:
-                Destroy(this.gameObject.GetComponent<PlaceMultipleObjects>());
+                Destroy(gameObject.GetComponent<PlaceMultipleObjects>());
                 break;
             case CAST_RAY_ON_CLICK:
-                Destroy(this.gameObject.GetComponent<CastRayOnClick>());
+                Destroy(gameObject.GetComponent<CastRayOnClick>());
                 break;
             default:
                 break;
@@ -74,12 +74,12 @@ public class MenuOptions : MonoBehaviour {
         if (selectedScript == NO_SCRIPT || !selectedObject) return;
 
         else if (selectedScript == PLACE_ON_PLANE) {
-            PlaceOnPlane scr = this.gameObject.GetComponent<PlaceOnPlane>();
+            PlaceOnPlane scr = gameObject.GetComponent<PlaceOnPlane>();
             scr.setPlacedPrefab(selectedObject);
         }
 
         else if (selectedScript == PLACE_MULTIPLE_OBJECTS) {
-            PlaceMultipleObjects scr = this.gameObject.GetComponent<PlaceMultipleObjects>();
+            PlaceMultipleObjects scr = gameObject.GetComponent<PlaceMultipleObjects>();
             scr.setPlacedPrefab(selectedObject);
         }
         return;
