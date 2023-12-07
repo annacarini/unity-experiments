@@ -55,4 +55,16 @@ public class MenuMain : MonoBehaviour {
         
     }
 
+<<<<<<< Updated upstream
+=======
+    // Per il pulsante che apre il menu dell'hand menu
+    public void toggleMenu() {
+        gameObject.SetActive(!gameObject.activeSelf);
+        if (gameObject.activeSelf) {
+            menuInputKeyboard.SetActive(false);
+            gameObject.GetComponent<RadialView>().enabled = true;
+        }
+
+    }
+>>>>>>> Stashed changes
 }
